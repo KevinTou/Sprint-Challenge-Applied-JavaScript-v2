@@ -18,12 +18,12 @@
   </div>
 */
 
-let currentIndex = 0;
-
 const carouselContainer = document.querySelector(".carousel-container");
 carouselContainer.append(createCarousel());
 
 function createCarousel() {
+  let currentIndex = 0;
+
   const carousel = document.createElement("div");
   const leftButton = document.createElement("div");
   const rightButton = document.createElement("div");
