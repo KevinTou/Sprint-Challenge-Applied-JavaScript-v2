@@ -22,6 +22,9 @@ const carouselContainer = document.querySelector(".carousel-container");
 carouselContainer.append(createCarousel());
 
 function createCarousel() {
+  const topBar = document.querySelector(".top-bar");
+  topBar.style.zIndex = 100;
+
   let currentIndex = 0;
 
   const carousel = document.createElement("div");
@@ -41,7 +44,6 @@ function createCarousel() {
   leftButton.textContent = ` < `;
   rightButton.textContent = ` > `;
 
-  carousel.style.zIndex = -22;
   leftButton.style.zIndex = 2;
 
   carousel.append(leftButton);
