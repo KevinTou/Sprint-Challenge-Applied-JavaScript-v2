@@ -28,7 +28,7 @@ axios
 
     articleTopic.map(topic => {
       articles[`${topic}`].map(article => {
-        cardContainer.append(createCard(article));
+        cardContainer.append(createCard(article, topic));
       });
     });
   })
@@ -36,7 +36,7 @@ axios
     console.log("Error has occurred: ", err);
   });
 
-function createCard(data) {
+function createCard(data, topic) {
   const card = document.createElement("div");
   const headline = document.createElement("div");
   const authorContainer = document.createElement("div");
@@ -49,9 +49,16 @@ function createCard(data) {
   authorContainer.classList.add("author");
   imgContainer.classList.add("img-container");
 
+  card.setAttribute("data-tab", topic);
   headline.textContent = data.headline;
   img.src = data.authorPhoto;
   author.textContent = data.authorName;
+
+  if (topic === "javascript") {
+    card.style.display = "block";
+  } else {
+    card.style.display = "none";
+  }
 
   card.append(headline);
   card.append(authorContainer);
