@@ -41,6 +41,7 @@ function createCarousel() {
   leftButton.textContent = ` < `;
   rightButton.textContent = ` > `;
 
+  carousel.style.zIndex = -22;
   leftButton.style.zIndex = 2;
 
   carousel.append(leftButton);
