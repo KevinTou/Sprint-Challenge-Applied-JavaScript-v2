@@ -55,7 +55,7 @@ function createCard(data, topic) {
   author.textContent = data.authorName;
 
   if (topic === "javascript") {
-    card.style.display = "block";
+    card.style.display = "flex";
   } else {
     card.style.display = "none";
   }

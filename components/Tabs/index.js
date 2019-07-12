@@ -49,7 +49,7 @@ function createTab(topic) {
     let selectedCards = document.querySelectorAll(
       `.card[data-tab='${tabName}']`
     );
-    selectedCards.forEach(card => (card.style.display = "block"));
+    selectedCards.forEach(card => (card.style.display = "flex"));
   });
 
   return tab;
